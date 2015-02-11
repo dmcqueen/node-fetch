@@ -97,6 +97,8 @@ function Fetch(url, opts) {
 		if (!headers.has('accept')) {
 			headers.set('accept', '*/*');
 		}
+		
+		headers.set('Content-Type', 'application/octet-stream');
 
 		options.headers = headers.raw();
                 console.log(">>>>>>>>>>>>>>>>>>>>>>> options >>>>>>>>>>>>>>>>>>>");
