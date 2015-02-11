@@ -107,6 +107,7 @@ function Fetch(url, opts) {
 		options.headers = headers.raw();
                 if(contentType) {
                         options.headers['Content-Type'] = contentType;
+                        options.headers['content-type'] = contentType;
                 }
 
                 console.log(">>>>>>>>>>>>>>>>>>>>>>> options >>>>>>>>>>>>>>>>>>>");
