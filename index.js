@@ -99,6 +99,8 @@ function Fetch(url, opts) {
 		}
 
 		options.headers = headers.raw();
+                console.log(">>>>>>>>>>>>>>>>>>>>>>> options >>>>>>>>>>>>>>>>>>>");
+                console.log(options);
 
 		// send request
 		var req = request(options);
