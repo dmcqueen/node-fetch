@@ -100,14 +100,12 @@ function Fetch(url, opts) {
                 
                 var contentType;
 	        if (headers.has('content-type')) {
-                        contentType = [];
-		        contentType.push(headers.get('content-type'));
+		        contentType = headers.get('content-type');
                         headers.delete('content-type');
                 }
 
 		options.headers = headers.raw();
                 if(contentType) {
-
                         options.headers['Content-Type'] = contentType;
                 }
 
