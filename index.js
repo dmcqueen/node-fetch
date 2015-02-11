@@ -97,12 +97,17 @@ function Fetch(url, opts) {
 		if (!headers.has('accept')) {
 			headers.set('accept', '*/*');
 		}
-
+                
+                var setExplicit;
 	        if (headers.has('content-type')) {
-		        headers.set('Content-Type', headers.get('content-type'));
+		        setExplicit = headers.get('content-type');
                 }
 
 		options.headers = headers.raw();
+                if(setExplicit) {
+                        options.headers['Content-Type'] = setExplicit;
+                }
+
                 console.log(">>>>>>>>>>>>>>>>>>>>>>> options >>>>>>>>>>>>>>>>>>>");
                 console.log(options);
 
